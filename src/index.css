@@ -24,3 +24,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Style for hamburger menu*/
+
+@media screen and (max-width:1024px) {
+
+  .show-nav {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }
+
+  .hide-nav ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+  }
+
+  .burger-bar, .burger-bar::before, .burger-bar::after {
+    display: block;
+    width: 40px;
+    height: 1px;
+    position: relative;
+    border-radius: 3px;
+    background: white;
+    transition: all .5s ease-in-out;
+  }
+
+  .burger-bar::before, .burger-bar::after {
+    content:"";
+    position: absolute;
+    left: 0;
+  }
+
+  .burger-bar::before {
+    transform: translateY(-12px);
+  }
+
+
+  .burger-bar::after {
+    transform: translateY(12px);
+  }
+
+  .show-nav .burger-bar::before {
+    transform: rotate(45deg);
+  }
+
+  .show-nav .burger-bar {
+    background: transparent;
+  }
+
+  .show-nav .burger-bar::after {
+    transform: rotate(-45deg);
+  }
+
+
+  .navbar-item:after {
+    margin-top: 15px !important;
+    content:"";
+    display: block;
+    margin: 0 auto;
+    width: 3vw;
+    height: 1px;
+    background-color: white;
+  }
+
+  .navbar-item:last-child:after {
+    display: none;
+  }
+
+  .navbar-item {
+    transition: all .2s ease-in-out;
+  }
+
+  .navbar-item:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+  }
+
+
+
+
+
+}

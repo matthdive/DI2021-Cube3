@@ -1,10 +1,19 @@
 import React from 'react';
-import Button from "../../components/UI/Button";
+import Layout from "../../layouts/Layout";
 
 
 function HomeContainer() {
     return (
-        <div>HomeContainer <Button color={"green"}>Test</Button></div>
+        <div className="h-[70vh] lg:h-[38vw] bg-cover bg-center bg-cover " style={{
+            backgroundImage: `url("/images/spiral-poster.jpeg")`
+        }}>
+
+        <Layout/>
+
+
+
+
+        </div>
     )
 }
 

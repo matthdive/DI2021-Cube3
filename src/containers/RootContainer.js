@@ -7,9 +7,7 @@ function RootContainer() {
     return (
         <div>
             <Routes>
-                <Route path={"/"} element={<Layout/>}>
                     <Route index element={<HomeContainer />} />
-                </Route>
             </Routes>
         </div>
     )

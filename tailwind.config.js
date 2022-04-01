@@ -6,7 +6,8 @@ module.exports = {
     fontFamily : {
       provoke : ["Provoke" , "sans-serif"]
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }
