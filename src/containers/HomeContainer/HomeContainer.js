@@ -8,7 +8,7 @@ function HomeContainer() {
             backgroundImage: `url("/images/spiral-poster.jpeg")`
         }}>
 
-        <Layout/>
+            <Layout/>
 
 
 

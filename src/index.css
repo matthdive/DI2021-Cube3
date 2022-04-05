@@ -25,6 +25,44 @@ code {
     monospace;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+
+/*Style for search bar*/
+
+
+custom-input-css {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+
+
+/*Style for transition search bar */
+
+
+.transitionSearchBar {
+  transition: all 0.5s;
+}
+
+/* Style for box shadow (hover search bar)*/
+
+
+.customKitShadow {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.74);
+}
+
+
+
+
+
+
+
 /*Style for hamburger menu*/
 
 @media screen and (max-width:1024px) {

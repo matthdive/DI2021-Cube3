@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { Outlet } from 'react-router-dom';
+import Search from "../components/UI/Search";
+import Profile from "../components/UI/Profile";
 
-function Layout() {
+
+
+function Layout (){
 
     const [showLinks, setShowLinks] = useState(false);
 
@@ -10,11 +14,10 @@ function Layout() {
     }
 
 
-
     return (
         <div>
             <nav className={`bg-gradient-to-b from-[#1D1D1D] ${showLinks ? "show-nav" : "hide-nav"}`}>
-                <div className="container flex w-100 items-center p-3">
+                <div className="flex w-100 items-center p-6">
 
                     <a href="#" className="flex items-center">
                         <img src="/images/screaming-logo.webp" className="mr-3 h-14 sm:h-14" alt="Screaming Logo"/>
@@ -32,12 +35,32 @@ function Layout() {
                             <li className="navbar-item elements lg:text-sm text-white block p-1.5  lg:p-0  lg:mb-0 text-[4vw]"><a href="#">Ma liste</a></li>
                         </ul>
 
+                        {/*Search box animated*/}
 
+                        <div className="w-7/12 justify-end flex">
+                            <Search/>
+                            <Profile/>
+                        </div>
+
+
+
+
+
+
+                    {/*Hamburger menu */}
 
                     <button className="custom-pointer block absolute right-4 top-6 lg:hidden h-[30px]" onClick={handleShowLinks}>
                         {/*<img src="/icons/hamburger-menu.svg" className="w-7 relative right-0 block" alt=""/>*/}
                         <span className="burger-bar"></span>
                     </button>
+
+
+                        
+
+
+
+
+
 
 
                     </div>
@@ -51,6 +74,7 @@ function Layout() {
         </div>
     )
 }
+
 
 
 
